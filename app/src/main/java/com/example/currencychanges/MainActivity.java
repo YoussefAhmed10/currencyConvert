@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         String amountInEgp = text.getText().toString() ;
         double amountInEgpInDouble = Double.parseDouble(amountInEgp);
         double amountInUsdInDouble = amountInEgpInDouble * 18.39 ;
-        String amountInUsd = Double.toString(amountInUsdInDouble);
-        Toast.makeText(this, amountInUsd, Toast.LENGTH_LONG).show();
+        String amountInUsd = String.format("%.2f",amountInUsdInDouble);
+        Toast.makeText(this, "Eg is " + amountInUsd + " in $", Toast.LENGTH_LONG).show();
         Log.i("text",text.getText().toString());
     }
 }
